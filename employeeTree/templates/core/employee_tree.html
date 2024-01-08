@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  {% load static %}
+
+  <head>
+    <title>Дерево співробітників</title>
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/core/employee_tree.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container mt-4">
+      <div class="row justify-content-center m-2">
+        <h1>Дерево співробітників</h1>
+      </div>
+      <div class="row justify-content-center">
+        <div class="tree">
+          <ul>
+            {% include 'core/employee_node.html' with employee=tree_structure %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="{% static 'js/core/employee_tree.js' %}"></script>
+  </body>
+</html>

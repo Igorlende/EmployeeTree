@@ -1,3 +1,7 @@
 /.idea/
 commands.txt
 /venv/
+/core/__pycache__/
+/core/migrations/__pycache__/
+/employeeTree/__pycache__/
+
