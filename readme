@@ -1,0 +1,17 @@
+--- Employee Tree ---
+
+To use the application:
+
+1. Clone the repository.
+2. Install Python (version 3.9 or higher).
+3. Install PostgreSQL (version 13 or higher).
+4. Install the required packages by running the command: `pip install -r requirements.txt`.
+5. Set your database settings in the file: `employeeTree/employeeTree/settings.py`.
+6. Migrate the database using the command: `python manage.py migrate`.
+7. Create a superuser using the command: `python manage.py createsuperuser`.
+8. Seed the database with employees using the command: `python manage.py seed --hierarchy-levels=7 --min-employees=50000`.
+9. Run the development server with the command: `python manage.py runserver`.
+10. Open your browser and navigate to [http://localhost:8000].
+11. Enjoy exploring the Employee Tree application!
+
+https://bootsnipp.com/snippets/orp8g

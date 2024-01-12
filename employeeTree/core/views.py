@@ -2,6 +2,7 @@ from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 from django.views import View
 from .models import Employee
+import time
 
 
 class EmployeeTreeView(View):
@@ -12,6 +13,7 @@ class EmployeeTreeView(View):
             'id': employee.id,
             'full_name': employee.full_name,
             'position': employee.position,
+            'icon': employee.icon,
             'subordinates': [],
         }
 
@@ -33,13 +35,15 @@ class LoadTwoBranchSubordinatesView(View):
     def get_subordinates(self, employee, depth=2):
         if depth > 0:
             subordinates = [{'id': subordinate.id, 'full_name': subordinate.full_name, 'position': subordinate.position,
-                             'subordinates': self.get_subordinates(subordinate, depth - 1)} for subordinate in employee.subordinates.all()]
+                             'icon': subordinate.icon, 'subordinates': self.get_subordinates(subordinate, depth - 1)}
+                            for subordinate in employee.subordinates.all()]
         else:
             subordinates = [{'id': subordinate.id, 'full_name': subordinate.full_name, 'position': subordinate.position,
-                             'subordinates': []} for subordinate in employee.subordinates.all()]
+                             'icon': subordinate.icon, 'subordinates': []} for subordinate in employee.subordinates.all()]
         return subordinates
 
     def get(self, request, *args, **kwargs):
+        #time.sleep(1)
         employee_id = kwargs.get('employee_id')
 
         try:

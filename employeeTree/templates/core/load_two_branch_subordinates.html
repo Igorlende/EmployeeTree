@@ -17,12 +17,13 @@
                   <i class="collapsed"><i class="fas fa-folder"></i></i>
                   <i class="expanded"><i class="far fa-folder-open"></i></i>
                 </div>
-                <img src="{% static 'img\user_icons\boy.png' %}" height="50" />
+                <img src="{{subordinate.icon.image.url}}" height="50" />
+
                 <div class="alert-link d-flex justify-content-center align-items-center w-100">
-                  {{ subordinate.position }}
+                  <div class="p-1">{{ subordinate.full_name }}</div>
                 </div>
               </div>
-              <div>{{ subordinate.full_name }}</div>
+              <div>{{ subordinate.position }}</div>
             </div>
           </div>
         </a></span>
@@ -40,12 +41,13 @@
                         <i class="collapsed"><i class="fas fa-folder"></i></i>
                         <i class="expanded"><i class="far fa-folder-open"></i></i>
                       </div>
-                      <img src="{% static 'img\user_icons\boy.png' %}" height="50" />
+                      <img src="{{second_subordinate.icon.image.url}}" height="50" />
+
                       <div class="alert-link d-flex justify-content-center align-items-center w-100">
-                        {{ second_subordinate.position }}
+                        <div class="p-1">{{ second_subordinate.full_name }}</div>
                       </div>
                     </div>
-                    <div>{{ second_subordinate.full_name }}</div>
+                    <div>{{ second_subordinate.position }}</div>
                   </div>
                 </div>
               </a></span>
