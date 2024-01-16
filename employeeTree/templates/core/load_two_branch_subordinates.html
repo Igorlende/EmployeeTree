@@ -6,10 +6,6 @@
       <span class="loaded" style="background: #d0e6e4;" data-id="{{subordinate.id}}"><a
           style="color: #000; text-decoration: none" data-toggle="collapse" href="#{{subordinate.id}}"
           aria-expanded="false" aria-controls="{{subordinate.id}}">
-          <!--<i class="collapsed"><i class="fas fa-folder"></i></i>
-          <i class="expanded"><i class="far fa-folder-open"></i></i>
-        <img src="{% static 'img\user_icons\boy.png' %}" height="50">
-          {{ subordinate.full_name }}({{ subordinate.position }}) -->
           <div class="row">
             <div class="col">
               <div class="d-flex">
@@ -20,10 +16,10 @@
                 <img src="{{subordinate.icon.image.url}}" height="50" />
 
                 <div class="alert-link d-flex justify-content-center align-items-center w-100">
-                  <div class="p-1">{{ subordinate.full_name }}</div>
+                  <div class="p-1 full-name">{{ subordinate.full_name }}</div>
                 </div>
               </div>
-              <div>{{ subordinate.position }}</div>
+              <div class="position">{{ subordinate.position }}</div>
             </div>
           </div>
         </a></span>
@@ -44,10 +40,10 @@
                       <img src="{{second_subordinate.icon.image.url}}" height="50" />
 
                       <div class="alert-link d-flex justify-content-center align-items-center w-100">
-                        <div class="p-1">{{ second_subordinate.full_name }}</div>
+                        <div class="p-1 full-name">{{ second_subordinate.full_name }}</div>
                       </div>
                     </div>
-                    <div>{{ second_subordinate.position }}</div>
+                    <div class="position">{{ second_subordinate.position }}</div>
                   </div>
                 </div>
               </a></span>

@@ -27,7 +27,7 @@
 .tree li span {
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
-    //border:2px solid #000;
+    border:2px solid #d0e6e4;
     //border-radius:3px;
     display:inline-block;
     padding:3px 8px;
@@ -43,7 +43,7 @@
 }
 .tree li span:hover {
     background: hotpink !important;
-    //border:2px solid #94a0b4;
+    border:2px solid hotpink;
     }
 
 [aria-expanded="false"] > .expanded,
@@ -54,4 +54,9 @@
 [aria-expanded="false"] > .row .col .d-flex .d-flex .expanded,
 [aria-expanded="true"] > .row .col .d-flex .d-flex .collapsed {
   display: none !important;
+}
+
+
+.drop-target {
+    border: 2px dotted red !important;  /* Замість #000 вкажіть потрібний вам колір */
 }

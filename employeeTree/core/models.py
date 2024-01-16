@@ -1,8 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
-# Create your models here.
-
 
 class CustomUser(AbstractUser):
     email = models.EmailField(unique=True)
@@ -27,6 +25,14 @@ class Employee(models.Model):
 
     def __str__(self):
         return self.full_name
+
+    def change_supervisor(self, new_supervisor):
+        # Змінюємо начальника співробітника
+        self.supervisor = new_supervisor
+        self.save()
+        # Рекурсивно змінюємо начальника для підлеглих
+        #for subordinate in self.subordinates.all():
+        #    subordinate.change_supervisor(new_supervisor)
 
     class Meta:
         ordering = ['full_name']

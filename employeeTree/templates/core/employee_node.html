@@ -2,7 +2,7 @@
 <li>
   <span style="background: #d0e6e4">
     <a style="color: #000; text-decoration: none" data-toggle="collapse" href="#{{employee.id}}" aria-expanded="true"
-      aria-controls="{{employee.id}}">
+      aria-controls="{{employee.id}}" class="top">
       <div class="row">
         <div class="col">
           <div class="d-flex">
@@ -12,10 +12,10 @@
             </div>
             <img src="{{employee.icon.image.url}}" height="50" />
             <div class="alert-link d-flex justify-content-center align-items-center w-100">
-              <div class="p-1">{{ employee.full_name }}</div>
+              <div class="p-1 full-name">{{ employee.full_name }}</div>
             </div>
           </div>
-          <div>{{ employee.position }}</div>
+          <div class="position">{{ employee.position }}</div>
         </div>
       </div>
     </a>
@@ -36,10 +36,10 @@
                   </div>
                   <img src="{{subordinate.icon.image.url}}" height="50" />
                   <div class="alert-link d-flex justify-content-center align-items-center w-100">
-                    <div class="p-1">{{ subordinate.full_name }}</div>
+                    <div class="p-1 full-name">{{ subordinate.full_name }}</div>
                   </div>
                 </div>
-                <div>{{ subordinate.position }}</div>
+                <div class="position">{{ subordinate.position }}</div>
               </div>
             </div>
           </a></span>

@@ -1,4 +1,10 @@
 --- Employee Tree ---
+Web app that displays the employee hierarchy in tree form.
+
+The tree was based on a snippet https://bootsnipp.com/snippets/orp8g
+
+http://127.0.0.1:8000/ - simple tree
+http://127.0.0.1:8000/employee_tree_with_changing_bosses - tree with the ability to change the boss by dragging elements.
 
 To use the application:
 
@@ -13,5 +19,3 @@ To use the application:
 9. Run the development server with the command: `python manage.py runserver`.
 10. Open your browser and navigate to [http://localhost:8000].
 11. Enjoy exploring the Employee Tree application!
-
-https://bootsnipp.com/snippets/orp8g

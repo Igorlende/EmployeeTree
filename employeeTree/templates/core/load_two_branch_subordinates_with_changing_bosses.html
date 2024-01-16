@@ -4,7 +4,7 @@
     {% for subordinate in subordinates %}
     <li>
       <span class="loaded" style="background: #d0e6e4;" data-id="{{subordinate.id}}"><a
-          style="color: #000; text-decoration: none" data-toggle="collapse" href="#{{subordinate.id}}"
+          style="color: #000; text-decoration: none" data-toggle="collapse" href="#{{subordinate.id}}" ondrop="drop(event)" ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event)" data-id="{{subordinate.id}}" ondragleave="dragLeave(event)"
           aria-expanded="false" aria-controls="{{subordinate.id}}">
           <!--<i class="collapsed"><i class="fas fa-folder"></i></i>
           <i class="expanded"><i class="far fa-folder-open"></i></i>
@@ -17,13 +17,13 @@
                   <i class="collapsed"><i class="fas fa-folder"></i></i>
                   <i class="expanded"><i class="far fa-folder-open"></i></i>
                 </div>
-                <img src="{{subordinate.icon.image.url}}" height="50" />
+                <img draggable="false" src="{{subordinate.icon.image.url}}" height="50" />
 
                 <div class="alert-link d-flex justify-content-center align-items-center w-100">
-                  <div class="p-1">{{ subordinate.full_name }}</div>
+                  <div class="p-1 full-name">{{ subordinate.full_name }}</div>
                 </div>
               </div>
-              <div>{{ subordinate.position }}</div>
+              <div class="position">{{ subordinate.position }}</div>
             </div>
           </div>
         </a></span>
@@ -32,7 +32,7 @@
           {% for second_subordinate in subordinate.subordinates %}
           <li>
             <span class="subordinate" style="background: #d0e6e4;" data-id="{{second_subordinate.id}}"><a
-                style="color: #000; text-decoration: none" data-toggle="collapse" href="#{{second_subordinate.id}}"
+                style="color: #000; text-decoration: none" data-toggle="collapse" href="#{{second_subordinate.id}}" ondrop="drop(event)" ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event)" data-id="{{second_subordinate.id}}" ondragleave="dragLeave(event)"
                 aria-expanded="false" aria-controls="{{second_subordinate.id}}">
                 <div class="row">
                   <div class="col">
@@ -41,13 +41,13 @@
                         <i class="collapsed"><i class="fas fa-folder"></i></i>
                         <i class="expanded"><i class="far fa-folder-open"></i></i>
                       </div>
-                      <img src="{{second_subordinate.icon.image.url}}" height="50" />
+                      <img draggable="false" src="{{second_subordinate.icon.image.url}}" height="50" />
 
                       <div class="alert-link d-flex justify-content-center align-items-center w-100">
-                        <div class="p-1">{{ second_subordinate.full_name }}</div>
+                        <div class="p-1 full-name">{{ second_subordinate.full_name }}</div>
                       </div>
                     </div>
-                    <div>{{ second_subordinate.position }}</div>
+                    <div class="position">{{ second_subordinate.position }}</div>
                   </div>
                 </div>
               </a></span>

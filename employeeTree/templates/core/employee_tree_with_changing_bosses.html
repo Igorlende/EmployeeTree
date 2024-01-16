@@ -28,7 +28,7 @@
       <div class="row justify-content-center">
         <div class="tree">
           <ul>
-            {% include 'core/employee_node.html' with employee=tree_structure %}
+            {% include 'core/employee_node_with_changing_bosses.html' with employee=tree_structure %}
           </ul>
         </div>
       </div>
@@ -39,6 +39,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="{% static 'js/core/employee_tree.js' %}"></script>
+  <script src="{% static 'js/core/employee_tree_with_changing_bosses.js' %}"></script>
   </body>
 </html>
